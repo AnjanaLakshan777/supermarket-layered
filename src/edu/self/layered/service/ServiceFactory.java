@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package edu.self.layered.services;
+package edu.self.layered.service;
+
+import edu.self.layered.services.custom.impl.ItemServiceImpl;
 
 /**
  *
@@ -15,7 +17,7 @@ public class ServiceFactory {
     private ServiceFactory() {
     }
     
-    public ServiceFactory getInstance(){
+    public static ServiceFactory getInstance(){
         if(serviceFactory == null){
             serviceFactory = new ServiceFactory();
         }
@@ -25,7 +27,7 @@ public class ServiceFactory {
     public SuperService getService(ServiceType type){
         switch(type){
             case ITEM:
-                return null;
+                return new ItemServiceImpl();
             case ORDER:
                 return null;
             case CUSTOMER:

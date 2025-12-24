@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package edu.self.layered.views;
+package edu.self.layered.view;
 
-import edu.self.layered.controllers.CustomerController;
-import edu.self.layered.dtos.CustomerDto;
+import edu.self.layered.controller.CustomerController;
+import edu.self.layered.dto.CustomerDto;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;

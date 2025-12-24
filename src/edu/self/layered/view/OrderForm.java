@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package edu.self.layered.views;
-import edu.self.layered.controllers.CustomerController;
-import edu.self.layered.controllers.ItemController;
-import edu.self.layered.dtos.CustomerDto;
-import edu.self.layered.dtos.ItemDto;
-import edu.self.layered.dtos.OrderDetailDto;
-import edu.self.layered.dtos.OrderDto;
+package edu.self.layered.view;
+import edu.self.layered.controller.CustomerController;
+import edu.self.layered.controller.ItemController;
+import edu.self.layered.dto.CustomerDto;
+import edu.self.layered.dto.ItemDto;
+import edu.self.layered.dto.OrderDetailDto;
+import edu.self.layered.dto.OrderDto;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 import java.util.Date;
-import edu.self.layered.controllers.OrderController;
+import edu.self.layered.controller.OrderController;
 
 /**
  *
@@ -193,14 +193,12 @@ public class OrderForm extends javax.swing.JFrame {
                         .addComponent(lblQty)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnAddToTable, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33))
+                            .addComponent(btnAddToTable, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(lblDiscount)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtDiscount, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)))))
+                                .addComponent(txtDiscount, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(33, 33, 33)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

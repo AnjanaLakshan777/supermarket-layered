@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package edu.self.layered.controllers;
-import edu.self.layered.dtos.OrderDto;
-import edu.self.layered.dtos.OrderDetailDto;
+package edu.self.layered.controller;
+import edu.self.layered.dto.OrderDto;
+import edu.self.layered.dto.OrderDetailDto;
 import java.util.ArrayList;
 import java.sql.SQLException;
 /**
