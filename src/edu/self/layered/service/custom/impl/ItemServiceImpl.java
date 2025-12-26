@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package edu.self.layered.services.custom.impl;
+package edu.self.layered.service.custom.impl;
 
 import edu.self.layered.dao.DaoFactory;
 import edu.self.layered.dao.custom.ItemDao;
 import edu.self.layered.dto.ItemDto;
 import edu.self.layered.entity.ItemEntity;
-import edu.self.layered.services.custom.ItemService;
+import edu.self.layered.service.custom.ItemService;
 import java.util.ArrayList;
 
 /**

@@ -5,7 +5,7 @@
 package edu.self.layered.controller;
 import edu.self.layered.dto.ItemDto;
 import edu.self.layered.service.ServiceFactory;
-import edu.self.layered.services.custom.ItemService;
+import edu.self.layered.service.custom.ItemService;
 import java.util.ArrayList;
 /**
  *

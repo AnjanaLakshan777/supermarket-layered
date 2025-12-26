@@ -4,7 +4,8 @@
  */
 package edu.self.layered.service;
 
-import edu.self.layered.services.custom.impl.ItemServiceImpl;
+import edu.self.layered.service.custom.impl.CustomerServiceImpl;
+import edu.self.layered.service.custom.impl.ItemServiceImpl;
 
 /**
  *
@@ -31,7 +32,7 @@ public class ServiceFactory {
             case ORDER:
                 return null;
             case CUSTOMER:
-                return null;
+                return new CustomerServiceImpl();
             default:
                 return null;
         }

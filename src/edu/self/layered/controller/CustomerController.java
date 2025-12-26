@@ -4,7 +4,8 @@
  */
 package edu.self.layered.controller;
 import edu.self.layered.dto.CustomerDto;
-import java.sql.SQLException;
+import edu.self.layered.service.ServiceFactory;
+import edu.self.layered.service.custom.CustomerService;
 import java.util.ArrayList;
 
 /**
@@ -13,19 +14,21 @@ import java.util.ArrayList;
  */
 public class CustomerController {
     
-    public String saveCustomer(CustomerDto customerDto)throws ClassNotFoundException, SQLException{
-        return "Success";
+    private CustomerService customerService = (CustomerService) ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.CUSTOMER);
+    
+    public String saveCustomer(CustomerDto customerDto)throws Exception{
+        return customerService.saveCustomer(customerDto);
     }
-    public String updateCustomer(CustomerDto customerDto) throws ClassNotFoundException, SQLException{
-        return "Success";
+    public String updateCustomer(CustomerDto customerDto) throws Exception{
+        return customerService.updateCustomer(customerDto);
     } 
-    public String deleteCustomer(String customerId) throws ClassNotFoundException, SQLException{
-        return "Success";
+    public String deleteCustomer(String customerId) throws Exception{
+        return customerService.deleteCustomer(customerId);
     } 
-    public CustomerDto getCustomer(String customerId) throws ClassNotFoundException, SQLException{
-        return null;
+    public CustomerDto getCustomer(String customerId) throws Exception{
+        return customerService.getCustomer(customerId);
     }
-    public ArrayList<CustomerDto> getAll() throws ClassNotFoundException, SQLException{
-        return null;
+    public ArrayList<CustomerDto> getAll() throws Exception{
+        return customerService.getAllCustomer();
     }
 }

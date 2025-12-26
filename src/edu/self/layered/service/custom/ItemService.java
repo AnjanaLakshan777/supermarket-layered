@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package edu.self.layered.services.custom;
+package edu.self.layered.service.custom;
 
 import edu.self.layered.dto.ItemDto;
 import edu.self.layered.service.SuperService;

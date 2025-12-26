@@ -47,15 +47,15 @@ public class ItemDaoImpl implements ItemDao{
     @Override
     public ArrayList<ItemEntity> getAll() throws Exception {
         ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Item");
-         ArrayList<ItemEntity> itemEntitys = new ArrayList<>();
+         ArrayList<ItemEntity> itemEntities = new ArrayList<>();
          while (rst.next()) {            
-            itemEntitys.add(new ItemEntity(rst.getString("ItemCode"),
+            itemEntities.add(new ItemEntity(rst.getString("ItemCode"),
                     rst.getString("Description"), 
                     rst.getString("PackSize"),
                     rst.getDouble("UnitPrice"),
                     rst.getInt("QtyOnHand")));
         }
-        return itemEntitys;
+        return itemEntities;
     }
     
 }

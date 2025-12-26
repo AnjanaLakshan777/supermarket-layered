@@ -16,7 +16,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //new CustomerForm().setVisible(true);
+        new CustomerForm().setVisible(true);
         new ItemForm().setVisible(true);
         //new OrderForm().setVisible(true);
     }
