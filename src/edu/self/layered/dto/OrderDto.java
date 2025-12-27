@@ -4,6 +4,8 @@
  */
 package edu.self.layered.dto;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Anjana Lakshan
@@ -12,14 +14,17 @@ public class OrderDto {
     private String orderId;
     private String custId;
     private String orderDate;
+    
+    private ArrayList<OrderDetailDto> orderDetailDtos;
 
     public OrderDto() {
     }
 
-    public OrderDto(String orderId, String custId, String orderDate) {
+    public OrderDto(String orderId, String custId, String orderDate, ArrayList<OrderDetailDto> orderDetailDtos) {
         this.orderId = orderId;
         this.custId = custId;
         this.orderDate = orderDate;
+        this.orderDetailDtos = orderDetailDtos;
     }
 
     /**
@@ -64,9 +69,23 @@ public class OrderDto {
         this.orderDate = orderDate;
     }
 
+    /**
+     * @return the orderDetailDtos
+     */
+    public ArrayList<OrderDetailDto> getOrderDetailDtos() {
+        return orderDetailDtos;
+    }
+
+    /**
+     * @param orderDetailDtos the orderDetailDtos to set
+     */
+    public void setOrderDetailDtos(ArrayList<OrderDetailDto> orderDetailDtos) {
+        this.orderDetailDtos = orderDetailDtos;
+    }
+
     @Override
     public String toString() {
-        return "OrderDto{" + "orderId=" + orderId + ", custId=" + custId + ", orderDate=" + orderDate + '}';
+        return "OrderDto{" + "orderId=" + orderId + ", custId=" + custId + ", orderDate=" + orderDate + ", orderDetailDtos=" + orderDetailDtos + '}';
     }
-    
+   
 }

@@ -4,16 +4,17 @@
  */
 package edu.self.layered.controller;
 import edu.self.layered.dto.OrderDto;
-import edu.self.layered.dto.OrderDetailDto;
-import java.util.ArrayList;
-import java.sql.SQLException;
+import edu.self.layered.service.ServiceFactory;
+import edu.self.layered.service.custom.OrderService;
 /**
  *
  * @author Anjana Lakshan
  */
 public class OrderController { 
     
-    public String placeOrder(OrderDto orderDto, ArrayList<OrderDetailDto> orderDetailDtos) throws ClassNotFoundException, SQLException{
-        return "Success";
+    private OrderService orderService = (OrderService)ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.ORDER);
+    
+    public String placeOrder(OrderDto orderDto) throws Exception{
+        return orderService.placeOrder(orderDto);
     }
 }

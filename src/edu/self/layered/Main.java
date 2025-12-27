@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         new CustomerForm().setVisible(true);
         new ItemForm().setVisible(true);
-        //new OrderForm().setVisible(true);
+        new OrderForm().setVisible(true);
     }
     
 }

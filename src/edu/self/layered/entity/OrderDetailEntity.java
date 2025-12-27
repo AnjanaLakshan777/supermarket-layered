@@ -2,24 +2,40 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package edu.self.layered.dto;
+package edu.self.layered.entity;
 
 /**
  *
  * @author Anjana Lakshan
  */
-public class OrderDetailDto {
+public class OrderDetailEntity {
+    private String orderId;
     private String itemCode;
-    private int qty;
+    private int orderQty;
     private int discount;
 
-    public OrderDetailDto() {
+    public OrderDetailEntity() {
     }
 
-    public OrderDetailDto(String itemCode, int qty, int discount) {
+    public OrderDetailEntity(String orderId, String itemCode, int orderQty, int discount) {
+        this.orderId = orderId;
         this.itemCode = itemCode;
-        this.qty = qty;
+        this.orderQty = orderQty;
         this.discount = discount;
+    }
+
+    /**
+     * @return the orderId
+     */
+    public String getOrderId() {
+        return orderId;
+    }
+
+    /**
+     * @param orderId the orderId to set
+     */
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
     /**
@@ -37,17 +53,17 @@ public class OrderDetailDto {
     }
 
     /**
-     * @return the qty
+     * @return the orderQty
      */
-    public int getQty() {
-        return qty;
+    public int getOrderQty() {
+        return orderQty;
     }
 
     /**
-     * @param qty the qty to set
+     * @param orderQty the orderQty to set
      */
-    public void setQty(int qty) {
-        this.qty = qty;
+    public void setOrderQty(int orderQty) {
+        this.orderQty = orderQty;
     }
 
     /**
@@ -66,7 +82,7 @@ public class OrderDetailDto {
 
     @Override
     public String toString() {
-        return "OrderDetailDto{" + "itemCode=" + itemCode + ", qty=" + qty + ", discount=" + discount + '}';
+        return "OrderDetailEntity{" + "orderId=" + orderId + ", itemCode=" + itemCode + ", orderQty=" + orderQty + ", discount=" + discount + '}';
     }
     
 }

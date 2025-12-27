@@ -365,9 +365,10 @@ public class OrderForm extends javax.swing.JFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String curDateStr = sdf.format(new Date());
         orderDto.setOrderDate(curDateStr);
+        orderDto.setOrderDetailDtos(orderDetailDtos);
         
         try{
-            String resp = orderController.placeOrder(orderDto, orderDetailDtos);
+            String resp = orderController.placeOrder(orderDto);
             JOptionPane.showMessageDialog(this, resp);
         }catch(Exception e){
             JOptionPane.showMessageDialog(this,e.getMessage());
